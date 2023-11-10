@@ -4,5 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--配置bean,id表示名字，class属性定义类型-->
     <bean id="bookDao" class="com.argo.dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="com.argo.service.impl.BookServiceImpl"/>
+<!--    配置service与dao的关系，property表示当前bean的属性，name表示配置哪个具体的属性，ref表示参考哪一个bean-->
+    <bean id="bookService" class="com.argo.service.impl.BookServiceImpl">
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
 </beans>
