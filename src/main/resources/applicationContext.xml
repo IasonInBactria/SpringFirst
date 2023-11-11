@@ -5,7 +5,7 @@
 <!--配置bean,id表示名字，class属性定义类型-->
     <bean id="bookDao" class="com.argo.dao.impl.BookDaoImpl"/>
 <!--    配置service与dao的关系，property表示当前bean的属性，name表示配置哪个具体的属性，ref表示参考哪一个bean-->
-    <bean id="bookService" class="com.argo.service.impl.BookServiceImpl">
+    <bean id="bookService" name="service service2 bookEbi" class="com.argo.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"></property>
     </bean>
 </beans>

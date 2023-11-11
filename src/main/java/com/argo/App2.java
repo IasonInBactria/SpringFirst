@@ -11,7 +11,7 @@ public class App2 {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         //获取bean
 //        BookDao bookDao = (BookDao) context.getBean("bookDao");
-        BookService service = (BookService) context.getBean("bookService");
+        BookService service = (BookService) context.getBean("service");
         service.save();
     }
 }
